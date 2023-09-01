@@ -1,10 +1,11 @@
 package selenide;
 
 import com.codeborne.selenide.*;
+import com.codeborne.selenide.selector.ByText;
 import org.openqa.selenium.Cookie;
 
-import static com.codeborne.selenide.Selenide.executeJavaScript;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Selenide.*;
 
 public class Snippets {
 
@@ -42,6 +43,45 @@ public class Snippets {
     }
 
     void selectors_example() {
+        $("div").click();
+        element("div").click();
+
+        $("div", 2).click(); //third div
+
+        $x("//h1//div").click();
+        $(byXpath("//h1//div")).click();
+
+        $(byText("Text")).click();
+        $(withText("ul tex")).click(); // поиск по подстроке
+
+        $(byTagAndText("div", "full text")).click();
+        $(withTagAndText("div", "ull tex")).click();
+
+        $("").parent();
+        $("").sibling(1);
+        $("").preceding(1);
+        $("").closest("div");
+        $("").ancestor("div");
+        $("div:last-child");
+
+        $("div").$("h1").find(byText("abc")).click(); //можно использовать find вместо $
+        $("div").$("h1").$(byText("abc")).click(); // но с find нельзя начинать
+
+        $(byAttribute("abc", "x")).click();
+        $("[abc=x]").click();
+
+        $(byId("myText")).click();
+        $("myText").click();
+
+        $(byClassName("red")).click();
+        $(".red").click();
+
+
+
+
+    }
+
+    void action_example() {
 
     }
 }
