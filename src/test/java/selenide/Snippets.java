@@ -46,8 +46,6 @@ public class Snippets {
         var cookie = new Cookie("foo", "bar");
         WebDriverRunner.getWebDriver().manage().addCookie(cookie);
 
-
-
     }
 
     void selectors_example() {
@@ -83,10 +81,6 @@ public class Snippets {
 
         $(byClassName("red")).click();
         $(".red").click();
-
-
-
-
     }
 
     void action_example() {
@@ -119,13 +113,6 @@ public class Snippets {
 
         $("").selectOption("dropdown_option");
         $("").selectRadio("radio_options");
-
-
-
-
-
-
-
     }
 
     void assertions_example() {
@@ -170,9 +157,6 @@ public class Snippets {
 
         $("").shouldBe(disabled);
         $("").shouldBe(enabled);
-
-
-
     }
 
     void collections_examples() {
