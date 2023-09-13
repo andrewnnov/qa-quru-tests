@@ -53,7 +53,5 @@ public class SelenideStepsTest {
         webSteps.clickOnRepositoryLink(REPOSITORY);
         webSteps.openIssueTab();
         webSteps.shouldSeeIssueWithNumber(NUMBEROFISSUE);
-
-
     }
 }
