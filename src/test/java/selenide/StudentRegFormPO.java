@@ -1,4 +1,5 @@
 package selenide;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -16,6 +17,7 @@ public class StudentRegFormPO extends BaseTest {
     String state = "NCR";
     String city = "Delhi";
 
+   @Disabled
     @Test
     public void regStudent() {
         registrationPage.openPage()

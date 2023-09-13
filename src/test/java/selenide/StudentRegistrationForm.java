@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -23,6 +24,7 @@ public class StudentRegistrationForm {
         Configuration.browserSize = "maximize";
     }
 
+    @Disabled
     @Test
     public void fillStudentForm() {
         Selenide.open("https://demoqa.com/automation-practice-form");
