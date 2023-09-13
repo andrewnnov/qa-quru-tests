@@ -1,6 +1,5 @@
 name: Test
 
-run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 
 jobs:
@@ -17,10 +16,6 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '17'
-
-
-
-
 
       #Start selenoid
       - uses: Xotabu4/selenoid-github-action@v2

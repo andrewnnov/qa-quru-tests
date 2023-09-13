@@ -29,14 +29,14 @@ hs_err_pid*
 *.yml
 
 .allure
-.allure
+
 
 target
 out
 driver
 allure-results
 
-gradle
+
 build
 .gradle
 
