@@ -5,23 +5,19 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest #где запускаем
-
     #что делаем
     steps:
       #выкачиваем репозиторий
       - uses: actions/checkout@v3
-
       #настраиваем java
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '17'
-
       #Start selenoid
       - uses: Xotabu4/selenoid-github-action@v2
       #запускаем тесты
       - run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
-
       # скачиваем историю тестов
       - uses: actions/checkout@v2
         if: always()
