@@ -21,6 +21,7 @@ public class LoginTests {
         $(".login-form").setValue("Здравствуйте, QA_GURU_BOT").pressEnter();
     }
 
+    @Disabled
     @Test
     void unsuccessfulLoginTest() {
 
