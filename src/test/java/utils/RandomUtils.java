@@ -9,10 +9,7 @@ public class RandomUtils {
         System.out.println(randomString(10));
         System.out.println(randomEmail());
         System.out.println(randomInt(10, 100));
-
-
         String[] names = {"a", "b", "c", "d"};
-
         System.out.println(randomItemFromList(names));
     }
 
